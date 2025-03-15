@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Autoexec CS2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Generator Autoexec dla CS2</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Strona Główna</a></li>
+                <li><a href="#">Poradniki</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="settings">
+            <h2>Ustawienia</h2>
+            
+            <h3>🎯 Podstawowe</h3>
+            <label for="sensitivity">Czułość myszki:</label>
+            <input type="number" id="sensitivity" placeholder="Wpisz wartość">
+
+            <label for="zoom_sensitivity">Czułość przybliżenia: [AWP/SSG]</label>
+            <input type="number" id="zoom_sensitivity" placeholder="Wpisz wartość">
+
+            <label for="volume">Głośność gry:</label>
+            <input type="number" id="volume" step="0.1" min="0" max="1" placeholder="0-1">
+            
+            <h3>🔊 Dźwięk</h3>
+            <label for="snd_mute_losefocus">Dźwięk po minimalizacji gry:</label>
+            <select id="snd_mute_losefocus">
+                <option value="">Wybierz</option>
+                <option value="1">Tak</option>
+                <option value="0">Nie</option>
+            </select>
+
+            <label for="snd_voipvolume">Głośność sojuszników:</label>
+            <input type="number" id="snd_voipvolume" placeholder="Wpisz wartość">
+            
+            <h3>🎯 Celownik</h3>
+            <label for="cl_crosshair_sniper_width">Rozmiar celownika w AWP/SSG:</label>
+            <input type="number" id="cl_crosshair_sniper_width" placeholder="Wpisz wartość">
+            
+            <h3>⚙️ Opcje gry</h3>
+            <label for="game_sleep">Wyłączenie trybu uśpienia gry:</label>
+            <select id="game_sleep">
+                <option value="">Wybierz</option>
+                <option value="1">Tak</option>
+                <option value="0">Nie</option>
+            </select>
+
+            <label for="ally_equipment">Ekwipunek sojuszników przez ściany:</label>
+            <select id="ally_equipment">
+                <option value="">Wybierz</option>
+                <option value="1">Tak</option>
+                <option value="0">Nie</option>
+            </select>
+            
+            <label for="player_contrast">Kontrast graczY:</label>
+            <input type="number" id="player_contrast" placeholder="Wpisz wartość">
+            
+            <h3>🧡️ Bindy</h3>
+            <label for="quick_drop_bomb">Szybkie wyrzucanie bomby:</label>
+            <input type="text" id="quick_drop_bomb_key" placeholder="Wpisz klawisz">
+
+            <label for="double_q">Dwa razy Q:</label>
+            <input type="text" id="double_q_key" placeholder="Wpisz klawisz">
+
+            <label for="jumpthrow">JumpThrow:</label>
+            <input type="text" id="jumpthrow_key" placeholder="Wpisz klawisz">
+        </section>
+        
+        <button id="generate">Generuj autoexec</button>
+        <div id="download-section" style="display:none;">
+            <p>Plik autoexec został wygenerowany! Pobierz poniżej:</p>
+            <a id="download-link" href="#">Pobierz</a>
+            <p><small>Umieść plik w folderze: <code>steam\steamapps\common\Counter-Strike 2\cs2\cfg</code></small></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Twórca: <a href="https://steamcommunity.com/id/playsig/" target="_blank">PLAYSU</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
